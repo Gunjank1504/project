@@ -1,0 +1,129 @@
+{
+    "id": "be290196-f4bf-4af5-abdb-5c272c1f06b0",
+    "name": "GeneratedProject6",
+    "publisher": "Default Publisher",
+    "version": "1.0.0.0",
+    "brief": "",
+    "description": "",
+    "privacyStatement": "",
+    "EULA": "",
+    "help": "",
+    "url": "",
+    "logo": "",
+    "dependencies": [
+        {
+            "id": "d3c551dd-5903-4194-b153-04ced9d29a2c",
+            "name": "India Tax Base",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.39217"
+        },
+        {
+            "id": "f1d9b696-156b-4251-b542-34e549fa80e9",
+            "name": "India Voucher Interface",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.37425"
+        },
+        {
+            "id": "ea130081-c669-460f-a5f4-5dde14f03131",
+            "name": "Statistical Accounts",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.37425"
+        },
+        {
+            "id": "e1d97edc-c239-46b4-8d84-6368bdf67c8b",
+            "name": "E-Document Core",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.37750"
+        },
+        {
+            "id": "eae5779e-7797-4c4c-977e-7516652b7a65",
+            "name": "India TDS",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.39217"
+        },
+        {
+            "id": "e4e86220-cac0-4ec3-b853-7c2fa610399d",
+            "name": "PowerBI Reports",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.37425"
+        },
+        {
+            "id": "3099ffc7-4cf7-4df6-9b96-7e4bc2bb587c",
+            "name": "Subscription Billing",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.38395"
+        },
+        {
+            "id": "cc11c22e-5ca3-423f-8804-88cac6d91983",
+            "name": "Dynamics BC Excel Reports",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.37425"
+        },
+        {
+            "id": "0959b6f9-1c39-4618-ac4c-9c7096158431",
+            "name": "SeerBit Payments",
+            "publisher": "Seerbit Technology Limited",
+            "version": "2.0.1.5"
+        },
+        {
+            "id": "c512d720-63b9-4b26-b062-a0c09b4ed322",
+            "name": "Company Hub",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.37425"
+        },
+        {
+            "id": "eddcf82e-482c-49d1-836b-ad0284f2c5b0",
+            "name": "India TCS",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.39217"
+        },
+        {
+            "id": "ac14293f-1eb7-4a7b-9936-b280da31970b",
+            "name": "Data Search",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.37425"
+        },
+        {
+            "id": "568aaa2d-4800-40d9-96c9-bc85d1585964",
+            "name": "GeneratedProject6",
+            "publisher": "Default Publisher",
+            "version": "1.0.0.0"
+        },
+        {
+            "id": "db643212-b7fb-4dd4-b5a8-cb44ac714461",
+            "name": "India GST",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.39217"
+        },
+        {
+            "id": "ec255f57-31d0-4ca2-b751-f2fa7c745abb",
+            "name": "Shopify Connector",
+            "publisher": "Microsoft",
+            "version": "26.4.37194.37425"
+        },
+        {
+            "id": "2dc39818-e0f0-42b6-99eb-ba29dc5f4102",
+            "publisher": "microsoft",
+            "name": "India Gate Entry",
+            "version": "25.2.27733.27999"
+        }
+    ],
+    "screenshots": [],
+    "platform": "1.0.0.0",
+    "application": "26.4.37194.37425",
+    "idRanges": [
+        {
+            "from": 50000,
+            "to": 999999
+        }
+    ],
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": true,
+        "includeSourceInSymbolFile": true
+    },
+    "runtime": "15.0",
+    "features": [
+        "NoImplicitWith"
+    ]
+}
