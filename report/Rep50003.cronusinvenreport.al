@@ -4,7 +4,7 @@ report 50300cronus_inven_report
     Caption = 'cronus_inven_report';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'cronus_inven_report.rdl';
+    RDLCLayout = 'RDL/cronus_inven_report.rdl';
     dataset
     {
         dataitem(SalesHeader; "Sales Header")

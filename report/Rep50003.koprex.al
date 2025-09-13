@@ -4,7 +4,7 @@ report 50111 koprex1
     Caption = 'koprex';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'koprex.rdl';
+    RDLCLayout = 'RDL/koprex.rdl';
     dataset
     {
         dataitem(SalesInvoiceHeader; "Sales Invoice Header")

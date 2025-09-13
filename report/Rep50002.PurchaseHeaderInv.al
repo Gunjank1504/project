@@ -4,7 +4,7 @@ report 60002 Purchase_Header_Inv
     Caption = 'Purchase_Header_Inv';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'comm_purchase_header_inv.rdl';
+    RDLCLayout = 'RDL/comm_purchase_header_inv.rdl';
     dataset
     {
         dataitem(PurchaseHeader; "Purchase Header")

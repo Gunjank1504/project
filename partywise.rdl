@@ -22,7 +22,7 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <!-- <Code>Public Function BlankZero(ByVal Value As Decimal)
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
     end if
@@ -56,7 +56,7 @@ Public Function BlankNegAndZero(ByVal Value As Decimal)
     end if
     Return Value
 End Function
-</Code> -->
+</Code>
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
@@ -64,12 +64,6 @@ End Function
   <DataSets>
     <DataSet Name="DataSet_Result">
       <Fields>
-        <Field Name="PostingDate">
-          <DataField>PostingDate</DataField>
-        </Field>
-        <Field Name="ItemDescription">
-          <DataField>ItemDescription</DataField>
-        </Field>
         <Field Name="Ship_to_Name">
           <DataField>Ship_to_Name</DataField>
         </Field>
@@ -111,6 +105,15 @@ End Function
         </Field>
         <Field Name="No__of_Bag">
           <DataField>No__of_Bag</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="PostingDate">
+          <DataField>PostingDate</DataField>
+        </Field>
+        <Field Name="ItemDescription">
+          <DataField>ItemDescription</DataField>
         </Field>
       </Fields>
       <Query>

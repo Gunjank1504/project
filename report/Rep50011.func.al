@@ -4,7 +4,7 @@ report 50021 function_report
     Caption = 'function_report';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'function_report.rdl';
+    RDLCLayout = 'RDL/function_report.rdl';
     dataset
     {
         dataitem(SalesHeader; "Sales Header")

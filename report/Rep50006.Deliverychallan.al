@@ -6,7 +6,7 @@ report 60006 "Delivery challan2"
     DefaultLayout = RDLC;
     
     
-    RDLCLayout = 'delivery_challan2.rdl';
+    RDLCLayout = 'RDL/delivery_challan2.rdl';
     dataset
     {
         dataitem("Sales Shipment Header";"Sales Shipment Header")

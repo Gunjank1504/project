@@ -4,7 +4,7 @@ report 50022 "Asha&sonsSalesinv"
     Caption = 'Asha&sonsSalesinv';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'AshaSaleinv.rdl';
+    RDLCLayout = 'RDL/AshaSaleinv.rdl';
     dataset
     {
         dataitem(SalesInvoiceHeader; "Sales Invoice Header")

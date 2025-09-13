@@ -4,7 +4,7 @@ report 60004 durian_report
     Caption = 'durian_report';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'durian_rep.rdl';
+    RDLCLayout = 'RDL/durian_rep.rdl';
     dataset
     {
         dataitem("Sales Invoice Header"; "Sales Invoice Header")

@@ -4,7 +4,7 @@ report 50041 kuber_crnote
     Caption = 'kuber_crnote';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'kubescr.rdl';
+    RDLCLayout = 'RDL/kubescr.rdl';
     dataset
     {
         dataitem(SalesCrMemoHeader; "Sales Cr.Memo Header")

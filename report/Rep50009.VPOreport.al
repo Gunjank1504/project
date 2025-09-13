@@ -4,7 +4,7 @@ report 60009 VPO_report
     Caption = 'VPO_report';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'vpo_report.rdl';
+    RDLCLayout = 'RDL/vpo_report.rdl';
     dataset
     {
         dataitem(PurchaseHeader; "Purchase Header")

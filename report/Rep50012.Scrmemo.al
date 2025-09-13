@@ -4,7 +4,7 @@ report 50014 Scr_memo
     Caption = 'Scr_memo';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'Scr_memo.rdl';
+    RDLCLayout = 'RDL/Scr_memo.rdl';
     dataset
     {
         dataitem(SalesCrMemoHeader; "Sales Cr.Memo Header")

@@ -2,7 +2,7 @@ report 50113 MOI_Report
 {
     ApplicationArea = All;
     Caption = 'MOI_Report';
-    RDLCLayout = 'Moi_reports.rdl';
+    RDLCLayout = 'RDL/Moi_reports.rdl';
     DefaultLayout = RDLC;
     UsageCategory = ReportsAndAnalysis;
     dataset

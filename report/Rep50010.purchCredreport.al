@@ -4,7 +4,7 @@ report 60010 "demo_report"
     UsageCategory = ReportsAndAnalysis;
     Caption = 'demo_report';
     DefaultLayout = RDLC;
-    RDLCLayout = 'demo_cred_report.rdl';
+    RDLCLayout = 'RDL/demo_cred_report.rdl';
     dataset
     {
         dataitem("Purch. Cr. Memo Hdr."; "Purch. Cr. Memo Hdr.")

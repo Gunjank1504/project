@@ -4,7 +4,7 @@ report 60008 K_PO_report
     Caption = 'K_PO_report';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'kpo_report.rdl';
+    RDLCLayout = 'RDL/kpo_report.rdl';
     dataset
     {
         dataitem(PurchaseHeader; "Purchase Header")

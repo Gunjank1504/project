@@ -4,7 +4,7 @@ report 50112 "commercial invoice"
     Caption = 'commercial invoice';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout ='commercial_report.rdl';
+    RDLCLayout ='RDL/commercial_report.rdl';
     dataset
     {
         dataitem(SalesInvoiceHeader; "Sales Invoice Header")

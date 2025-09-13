@@ -4,7 +4,7 @@ report 80001 EXP_challan
     Caption = 'EXP_challan';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'EXP_challan.rdl';
+    RDLCLayout = 'RDL/EXP_challan.rdl';
     dataset
     {
         dataitem(SalesShipmentHeader; "Sales Shipment Header")

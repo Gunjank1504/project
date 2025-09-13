@@ -4,7 +4,7 @@ report 70001 Debit_note
     Caption = 'Debit_note';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'debit_note.rdl';
+    RDLCLayout = 'RDL/debit_note.rdl';
     dataset
     {
         dataitem(SalesCrMemoHeader; "Sales Cr.Memo Header")

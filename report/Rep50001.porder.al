@@ -4,7 +4,7 @@ report 60011 porder
     Caption = 'porder';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'porder.rdl';
+    RDLCLayout = 'RDL/porder.rdl';
     dataset
     {
         dataitem(PurchaseHeader; "Purchase Header")

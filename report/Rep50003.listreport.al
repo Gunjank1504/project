@@ -4,7 +4,7 @@ report 60003 list_report
     Caption = 'list_report';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
-    RDLCLayout = 'list_report.rdl';
+    RDLCLayout = 'RDL/list_report.rdl';
     dataset
     {
         dataitem("Purch. Inv. Header"; "Purch. Inv. Header")
