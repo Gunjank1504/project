@@ -1,0 +1,26 @@
+[33mcommit 6b4309e671b67e885a1f657ba681eed4a2e10019[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 7f59849 e40d422
+Author: gunjan <gunjan1504kathuria@gmail.com>
+Date:   Sat Sep 13 16:28:18 2025 +0530
+
+    Merge branch 'main' of https://github.com/Gunjank1504/project
+
+[33mcommit 7f59849efa28e266962b7945d2593b9fe5f502ab[m
+Author: gunjan <gunjan1504kathuria@gmail.com>
+Date:   Sat Sep 13 16:27:51 2025 +0530
+
+    updated files
+
+[33mcommit e40d4229e79e73605974bf470692e7f42900262e[m
+Author: Gunjank1504 <106676919+Gunjank1504@users.noreply.github.com>
+Date:   Sat Sep 13 16:13:33 2025 +0530
+
+    Set up CI with Azure Pipelines
+    
+    [skip ci]
+
+[33mcommit e3bb1a00da8a709fb097dcb3b0149e323e3183fb[m[33m ([m[1;31mreportsPBTPL/main[m[33m, [m[1;31mreportsPBTPL/HEAD[m[33m)[m
+Author: gunjan <gunjan1504kathuria@gmail.com>
+Date:   Fri Sep 12 10:03:04 2025 +0530
+
+    initial commit
