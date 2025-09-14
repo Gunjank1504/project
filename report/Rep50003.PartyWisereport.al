@@ -10,11 +10,16 @@ report 50023 PartyWise_report
          // Top-level: Sales Shipment Header
         dataitem("Sales Shipment Header"; "Sales Shipment Header")
         {
-            column("Ship_to_Name"; "Ship-to Name") { }
-            column("Ship_to_City"; "Ship-to City") { }
-            column("custstate"; custstate) { }
-            column("custcity"; custcity) { }
-            column("Broker_Name"; "Brokers Name") { }
+            column("Ship_to_Name"; "Ship-to Name")
+             { }
+            column("Ship_to_City"; "Ship-to City") 
+            { }
+            column("custstate"; custstate) 
+            { }
+            column("custcity"; custcity) 
+            { }
+            column("Broker_Name"; "Brokers Name") 
+            { }
 
             // Sales Shipment Line - nested under Header
             dataitem("Sales Shipment Line"; "Sales Shipment Line")
