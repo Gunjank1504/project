@@ -53,7 +53,9 @@ report 50023 PartyWise_report
 
             trigger OnAfterGetRecord()
             begin
-                if cust.Get("Sell-to Customer No.") then begin
+                cust.Reset();
+                cust.SetRange("No.", "Sales Shipment Header"."Sell-to Customer No.");
+                if cust.FindFirst() then begin
                     custstate := cust."State Code";
                     custcity := cust.City;
                 end;
