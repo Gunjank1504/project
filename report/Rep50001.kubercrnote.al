@@ -213,7 +213,7 @@ report 50041 kuber_crnote
                 salesinv.Reset();
                 salesinv.SetRange("No.",SalesCrMemoHeader."Applies-to Doc. No.");
                 if salesinv.FindFirst() then begin
-                    transporterN:= salesinv."Transporter Name";
+                    transporterN:= salesinv."Transporters Name";
                     lrno:= salesinv."LR/RR No.";
                     lrdate:=salesinv."LR/RR Date";
                 end;
