@@ -37,5 +37,12 @@ tableextension 50039 salesH extends "Sales Header"
             Caption = 'SO created by';
             DataClassification = ToBeClassified;
         }
+        field(500014;"EMD type"; Option )
+        {
+            OptionMembers = "Gold", "Silver";
+            OptionCaption = 'EMD Type';
+            DataClassification = ToBeClassified;
+
+        }
     }
 }
