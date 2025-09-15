@@ -11,7 +11,7 @@
       <am:Name>PBIRB</am:Name>
       <am:Version>15.7.1814.616</am:Version>
     </am:UpdatedBy>
-    <am:LastModifiedTimestamp>2025-09-10T11:52:28.3938917Z</am:LastModifiedTimestamp>
+    <am:LastModifiedTimestamp>2025-09-15T05:05:28.3828271Z</am:LastModifiedTimestamp>
   </am:AuthoringMetadata>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -4462,10 +4462,10 @@ the nature and quality which it/these purports/purported to be FSSAI No. 1332100
           </Style>
         </PageFooter>
         <PageHeight>11.69in</PageHeight>
-        <PageWidth>8.27in</PageWidth>
-        <LeftMargin>0in</LeftMargin>
+        <PageWidth>13in</PageWidth>
+        <LeftMargin>0.25in</LeftMargin>
         <RightMargin>0in</RightMargin>
-        <TopMargin>0in</TopMargin>
+        <TopMargin>0.25in</TopMargin>
         <BottomMargin>0in</BottomMargin>
         <Style />
       </Page>

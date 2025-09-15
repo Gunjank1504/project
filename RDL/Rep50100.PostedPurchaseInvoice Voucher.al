@@ -286,7 +286,7 @@ report 50500 "Posted Purchase Invoice"
     end;
 
     var
-        IRN_NO: Code[50];
+        IRN_NO: Code[20];
         AmountinwordsGST: text;
         TaxTypeObjHelper: Codeunit "Tax Type Object Helper";
         ComponentAmt: Decimal;
@@ -375,7 +375,7 @@ report 50500 "Posted Purchase Invoice"
 
 
 
-    procedure FormatNoText(var NoText: array[2] of Text[100]; No: Decimal; CurrencyCode: Code[10])
+    procedure FormatNoText(var NoText: array[2] of Text[100]; No: Decimal; CurrencyCode: Code[20])
     var
         PrintExponent: Boolean;
         Ones: Integer;

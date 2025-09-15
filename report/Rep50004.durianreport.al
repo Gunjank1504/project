@@ -226,8 +226,8 @@ report 60004 durian_report
         ItemLedger: Record "Item Ledger Entry";
         StartDate: Date;
         EndDate: Date;
-        LocCode: Code[10];
-        ItemNo: code[10];
+        LocCode: Code[20];
+        ItemNo: code[20];
         Inventry: Decimal;
         shrt_qty:Decimal;
         blue:Code[20];

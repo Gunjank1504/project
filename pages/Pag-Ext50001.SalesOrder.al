@@ -4,7 +4,7 @@ pageextension 50821 salesOrder extends "Sales Order"
     {
         addafter("Posting Date")
         {
-            field("Transporters Name";Rec."Transporters Name")
+            field("Transporter Name"; Rec."Transporter Name")
             {
                 ApplicationArea = All;
                 Editable = true;

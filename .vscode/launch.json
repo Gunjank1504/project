@@ -9,7 +9,8 @@
             "sessionId": 21679,
             "breakOnNext": "WebClient",
             "breakOnError": "ExcludeTry",
-            "tenant": "727e4592-c258-41a4-8c60-073ef0a7f040"
+            "tenant": "727e4592-c258-41a4-8c60-073ef0a7f040",
+            "schemaUpdateMode": "ForceSync"
         },
         {
             "name": "AL: Generated Snapshot request",
@@ -20,7 +21,8 @@
             "sessionId": 21679,
             "breakOnNext": "WebClient",
             "executionContext": "DebugAndProfile",
-            "tenant": "727e4592-c258-41a4-8c60-073ef0a7f040"
+            "tenant": "727e4592-c258-41a4-8c60-073ef0a7f040",
+            "schemaUpdateMode": "ForceSync"
         },
         {
             "name": "AL: Generated Download Symbols request",
@@ -28,7 +30,8 @@
             "type": "al",
             "environmentType": "Sandbox",
             "environmentName": "BC26",
-            "tenant": "727e4592-c258-41a4-8c60-073ef0a7f040"
+            "tenant": "727e4592-c258-41a4-8c60-073ef0a7f040",
+            "schemaUpdateMode": "ForceSync"
         }
     ]
 }

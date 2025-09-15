@@ -9,37 +9,37 @@ report 50041 kuber_crnote
     {
         dataitem(SalesCrMemoHeader; "Sales Cr.Memo Header")
         {
-            column(comp_name;comp.Name)
+            column(comp_name; comp.Name)
             {
-                
+
             }
-            column(comp_add;comp.Address)
+            column(comp_add; comp.Address)
             {
-                
+
             }
-            column(comp_add2;comp."Address 2")
+            column(comp_add2; comp."Address 2")
             {
-                
+
             }
-            column(comp_city;comp.City)
+            column(comp_city; comp.City)
             {
-                
+
             }
-            column(comp_ph;comp."Phone No.")
+            column(comp_ph; comp."Phone No.")
             {
-                
+
             }
-            column(comp_ph2;comp."Phone No. 2")
+            column(comp_ph2; comp."Phone No. 2")
             {
-                
+
             }
-            column(comp_mail;comp."E-Mail")
+            column(comp_mail; comp."E-Mail")
             {
-                
+
             }
-            column(comp_gst;comp."GST Registration No.")
+            column(comp_gst; comp."GST Registration No.")
             {
-                
+
             }
             column(No; "No.")
             {
@@ -47,7 +47,7 @@ report 50041 kuber_crnote
             column(PostingDate; "Posting Date")
             {
             }
-            column(Shipment_Date;"Shipment Date")
+            column(Shipment_Date; "Shipment Date")
             {
             }
             column(ExternalDocumentNo; "External Document No.")
@@ -77,81 +77,81 @@ report 50041 kuber_crnote
             column(TransportMethod; "Transport Method")
             {
             }
-            column(Vehicle_No_;"Vehicle No.")
+            column(Vehicle_No_; "Vehicle No.")
             {
-                
+
             }
-            column(Customer_GST_Reg__No_;"Customer GST Reg. No.")
+            column(Customer_GST_Reg__No_; "Customer GST Reg. No.")
             {
-                
+
             }
-            column(custst;custst)
+            column(custst; custst)
             {
-                
+
             }
-            column(custstname;custstname)
+            column(custstname; custstname)
             {
-                
+
             }
-            column(lrno;lrno)
+            column(lrno; lrno)
             {
-                
+
             }
-            column(lrdate;lrdate)
+            column(lrdate; lrdate)
             {
-                
+
             }
-            column(transporterN;transporterN)
+            column(transporterN; transporterN)
             {
-                
+
             }
-            dataitem("Sales Cr.Memo Line";"Sales Cr.Memo Line")
+            dataitem("Sales Cr.Memo Line"; "Sales Cr.Memo Line")
             {
-                column(SrNo;SrNo)
+                column(SrNo; SrNo)
                 {
-                    
+
                 }
-                column(Description;Description)
+                column(Description; Description)
                 {
-                    
+
                 }
-                column(HSN_SAC_Code;"HSN/SAC Code")
+                column(HSN_SAC_Code; "HSN/SAC Code")
                 {
-                    
+
                 }
-                column(Quantity;Quantity)
+                column(Quantity; Quantity)
                 {
-                    
+
                 }
-                column(Unit_Price;"Unit Price")
+                column(Unit_Price; "Unit Price")
                 {
-                    
+
                 }
-                column(GSTRate;GSTRate)
+                column(GSTRate; GSTRate)
                 {
-                    
+
                 }
-                column(Amount;Amount)
+                column(Amount; Amount)
                 {
-                    
+
                 }
-                column(Amountinwords;Amountinwords)
+                column(Amountinwords; Amountinwords)
                 {
-                    
+
                 }
-                column(grandtotal;grandtotal)
+                column(grandtotal; grandtotal)
                 {
-                    
+
                 }
-                column(GSTAmt;GSTAmt)
+                column(GSTAmt; GSTAmt)
                 {
-                    
+
                 }
                 trigger OnAfterGetRecord()
                 begin
                     SrNo += 1;
-                    Amount:=Quantity*"Unit Price";
-                    grandtotal:= GSTAmt + Amount;
+                    Amount := Quantity * "Unit Price";
+                    grandtotal := GSTAmt + Amount;
 
                     clear(GSTrate);
                     clear(CGSTAmt);
@@ -161,11 +161,11 @@ report 50041 kuber_crnote
                     clear(IGSTAmt);
                     Clear(IGSTRate);
                     "Sales Cr.Memo Line".Reset();
-                     "Sales Cr.Memo Line".SetRange("Document No.", "No.");
-                    if  "Sales Cr.Memo Line".FindFirst() then begin
+                    "Sales Cr.Memo Line".SetRange("Document No.", "No.");
+                    if "Sales Cr.Memo Line".FindFirst() then begin
                         repeat
                             taxinformation.Reset();
-                            taxinformation.SetFilter("Tax Record ID", '%1',  "Sales Cr.Memo Line".RecordId);
+                            taxinformation.SetFilter("Tax Record ID", '%1', "Sales Cr.Memo Line".RecordId);
                             taxinformation.SetFilter("Value Type", '1%', taxinformation."Value Type"::COMPONENT);
                             taxinformation.SetRange("Visible on Interface", true);
                             if taxinformation.FindFirst() then begin
@@ -187,15 +187,15 @@ report 50041 kuber_crnote
 
                                 until taxinformation.Next() = 0;
                             end;
-                        until  "Sales Cr.Memo Line".Next() = 0;
+                        until "Sales Cr.Memo Line".Next() = 0;
                     end;
                     GSTrate := Abs(SGSTRate + IGSTRate + CGSTRate);
                     GSTAmt := Abs(SGSTAmt + IGSTAmt + CGSTAmt);
 
-                         Clear(Amountinwords);
+                    Clear(Amountinwords);
                     InitTextVariable();
-                    grandtotal:= round(grandtotal, 0.01);
-                    FormatNoText(Notext1, grandtotal,  "Sales Cr.Memo Line".GetCurrencyCode());
+                    grandtotal := round(grandtotal, 0.01);
+                    FormatNoText(Notext1, grandtotal, "Sales Cr.Memo Line".GetCurrencyCode());
                     Amountinwords := Notext1[1];
 
                 end;
@@ -203,19 +203,19 @@ report 50041 kuber_crnote
             trigger OnAfterGetRecord()
             begin
                 cust.Reset();
-                cust.SetRange("No.",SalesCrMemoHeader."Bill-to Customer No.");
-                st.SetRange(Code,cust."State Code");
+                cust.SetRange("No.", SalesCrMemoHeader."Bill-to Customer No.");
+                st.SetRange(Code, cust."State Code");
                 if cust.FindFirst() then begin
-                    custst:= st."State Code (GST Reg. No.)";
-                    custstname:=st.Description;
+                    custst := st."State Code (GST Reg. No.)";
+                    custstname := st.Description;
                 end;
                 //LRnumber and transportername
                 salesinv.Reset();
-                salesinv.SetRange("No.",SalesCrMemoHeader."Applies-to Doc. No.");
+                salesinv.SetRange("No.", SalesCrMemoHeader."Applies-to Doc. No.");
                 if salesinv.FindFirst() then begin
-                    transporterN:= salesinv."Transporters Name";
-                    lrno:= salesinv."LR/RR No.";
-                    lrdate:=salesinv."LR/RR Date";
+                    transporterN := salesinv."Transporter Name";
+                    lrno := salesinv."LR/RR No.";
+                    lrdate := salesinv."LR/RR Date";
                 end;
             end;
         }
@@ -242,20 +242,21 @@ report 50041 kuber_crnote
     begin
         comp.Get();
     end;
+
     var
-    salesinv:Record "Sales Invoice Header";
-    comp:Record "Company Information";
-    cust:Record Customer;
-    st:Record State;
-    lrno: Text[20];
-    lrdate:Date;
-    custstname:Text[20];
-    transporterN: Text[100];
-    custst:Code[20];
-    SrNo:Integer;
-    Amount:Decimal;
-    grandtotal:Decimal;
-    GSTAmt: Decimal;
+        salesinv: Record "Sales Invoice Header";
+        comp: Record "Company Information";
+        cust: Record Customer;
+        st: Record State;
+        lrno: Text[20];
+        lrdate: Date;
+        custstname: Text[20];
+        transporterN: Text[100];
+        custst: Code[20];
+        SrNo: Integer;
+        Amount: Decimal;
+        grandtotal: Decimal;
+        GSTAmt: Decimal;
         ItemGstrate: Decimal;
         CGSTAmt: Decimal;
         IGSTAmt: Decimal;

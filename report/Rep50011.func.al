@@ -453,7 +453,7 @@ report 50021 function_report
 
 
 
-    procedure FormatNoText(var NoText: array[2] of Text[100]; No: Decimal; CurrencyCode: Code[10])
+    procedure FormatNoText(var NoText: array[2] of Text[100]; No: Decimal; CurrencyCode: Code[20])
     var
         PrintExponent: Boolean;
         Ones: Integer;

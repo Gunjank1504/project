@@ -4,7 +4,7 @@ pageextension 50121 PSalesInv extends "Posted Sales Invoice"
     {
         addafter("Transport Method")
         {
-            field("Transporters Name";Rec."Transporters Name")
+            field("Transporter Name";Rec."Transporter Name")
             {
                 ApplicationArea = All ;
                 Caption = 'Transporter Name';
