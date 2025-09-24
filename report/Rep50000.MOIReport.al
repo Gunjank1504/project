@@ -25,6 +25,9 @@ report 50113 MOI_Report
             {
 
             }
+column(due_date;"Due Date")
+{
+}
 
             column(No_; "No.")
             {
