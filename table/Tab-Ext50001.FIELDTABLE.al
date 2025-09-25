@@ -45,6 +45,14 @@ tableextension 70001 FIELD_TABLE extends "Sales Header"
             DataClassification = ToBeClassified;
             TableRelation = Location.Code;
         }
+field(50009; "location of repaired"; Text[100])
+{
+            Caption = 'location of repaired';
+            DataClassification = ToBeClassified;
+            TableRelation = Location.Code;
+}
+
+
         // field(50008; "Transporter Name"; Text[100])
         // {
         //     Caption = 'Transporter Name';

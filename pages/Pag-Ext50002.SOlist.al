@@ -20,6 +20,10 @@ pageextension 80022 "SO _list" extends "Sales Order List"
             {
                 ApplicationArea =All;
             }
+            field("location of repaired"; rec."location of repaired")
+            {
+            ApplicationArea = All;
+            }
         }
     }
 }
