@@ -1,6 +1,6 @@
 tableextension 70001 FIELD_TABLE extends "Sales Header"
 {
-    
+
     fields
     {
         field(50001; "Who did job"; Text[100])
@@ -31,7 +31,7 @@ tableextension 70001 FIELD_TABLE extends "Sales Header"
             OptionCaption = ', consignee,location';
             Caption = 'consignee_address';
             DataClassification = ToBeClassified;
-            
+
         }
         field(50006; location; Text[20])
         {
@@ -39,24 +39,28 @@ tableextension 70001 FIELD_TABLE extends "Sales Header"
             DataClassification = ToBeClassified;
             TableRelation = Location.Code;
         }
-         field(50007; consignee; Text[20])
+        field(50007; consignee; Text[20])
         {
             Caption = 'consignee';
             DataClassification = ToBeClassified;
             TableRelation = Location.Code;
         }
-field(50009; "location of repaired"; Text[100])
-{
+        field(50009; "location of repaired"; Text[100])
+        {
             Caption = 'location of repaired';
             DataClassification = ToBeClassified;
             TableRelation = Location.Code;
-}
-
+        }
+        // field(50010;"No. of Bag"; decimal)
+        // {
+        //      Caption = 'location of repaired';
+        //     DataClassification = ToBeClassified;
+        // }
 
         // field(50008; "Transporter Name"; Text[100])
         // {
         //     Caption = 'Transporter Name';
         //     DataClassification = ToBeClassified;
         // }
+        }
     }
-}

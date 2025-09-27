@@ -1401,6 +1401,9 @@ End Function
         <Field Name="comppic">
           <DataField>comppic</DataField>
         </Field>
+        <Field Name="due_date">
+          <DataField>due_date</DataField>
+        </Field>
         <Field Name="No_">
           <DataField>No_</DataField>
         </Field>

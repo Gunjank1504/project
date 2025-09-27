@@ -43,5 +43,6 @@ pageextension 70024 Cus_SOReports extends "Sales Order"
                 end;
             }
         }
+        
     }
 }

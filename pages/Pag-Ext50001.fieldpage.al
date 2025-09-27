@@ -49,6 +49,11 @@ pageextension 60021 field_page extends "Sales Order"
             ApplicationArea = All;
             Editable = true ; 
           }
+        //   field("No. of Bag";Rec."No. of Bag")
+        //   {
+        //     ApplicationArea = All;
+        //     Editable = true;
+        //   }
         }
     }
 }

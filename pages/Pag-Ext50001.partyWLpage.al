@@ -1,4 +1,4 @@
-pageextension 50001 partyWLinepage extends "Posted Sales Shpt. Subform"
+pageextension 50052 partyWLinepage extends "Posted Sales Shpt. Subform"
 {
     layout{
         addafter(Quantity)

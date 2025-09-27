@@ -3,7 +3,7 @@ namespace GeneratedProject.GeneratedProject;
 using Microsoft.Sales.Document;
 using Microsoft.Foundation.Company;
 
-report 50002 Asha_SQuot
+report 50062 Asha_SQuot
 {
     ApplicationArea = All;
     Caption = 'Asha_SQuot';
