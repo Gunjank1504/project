@@ -47,6 +47,23 @@ report 50006 Kuber_listing
             column(SelltoCustomerName; "Sell-to Customer Name")
             {
             }
+            column(Sell_to_City;"Sell-to City")
+            {
+                
+            }
+
+            column(Due_Date;"Due Date")
+            {
+                
+            }
+            column(particular;particular)
+            {
+                
+            }
+            column(alldata;alldata)
+            {
+                
+            }
             dataitem("Sales Line";"Sales Line")
             {
                 DataItemLink = "Document No." = field("No.");
@@ -141,18 +158,17 @@ report 50006 Kuber_listing
             {
                 group(filter)
                 {
-                    // field(No;SalesHeader."No.")
-                    // {
-                    //     Caption = 'No.';
-                    //     ApplicationArea = All;
-                    //     TableRelation = "Sales Header"."No.";
-                    // }
-                    // field(DocumentDate;SalesHeader."Document Date")
-                    // {
-                    //     Caption = 'Document Date';
-                    //     ApplicationArea = All;
-                    //     TableRelation = Date;
-                    // }
+                    field(alldata;alldata)
+                    {
+                        Caption = 'alldata';
+                        ApplicationArea = All;
+                    }
+                    field(particular;particular)
+                    {
+                        Caption = 'particular';
+                        ApplicationArea = All;
+                        
+                    }
                 }
             }
         }
@@ -180,4 +196,6 @@ report 50006 Kuber_listing
     Varient_Wt:Decimal;
     NoOFBag:Decimal;
     NoOfBagShipped:Decimal;
+    alldata:Boolean;
+    particular:Boolean;
 }

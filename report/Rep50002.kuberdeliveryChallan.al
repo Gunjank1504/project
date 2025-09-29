@@ -16,43 +16,43 @@ report 50002 kuber_deliveryChallan
     {
         dataitem(SalesShipmentHeader; "Sales Shipment Header")
         {
-            column(comp_name;comp.Name)
+            column(comp_name; comp.Name)
             {
-                
+
             }
-            column(comp_add;comp.Address)
+            column(comp_add; comp.Address)
             {
-                
+
             }
-            column(comp_add2;comp."Address 2")
+            column(comp_add2; comp."Address 2")
             {
-                
+
             }
-            column(comp_city;comp.City)
+            column(comp_city; comp.City)
             {
-                
+
             }
-            column(comp_region;comp."Country/Region Code")
+            column(comp_region; comp."Country/Region Code")
             {
-                
+
             }
-            column(comp_pc;comp."Post Code")
+            column(comp_pc; comp."Post Code")
             {
-                
+
             }
-            column(comp_stc;comp."State Code")
+            column(comp_stc; comp."State Code")
             {
-                
+
             }
-            column(comp_mail;comp."E-Mail")
+            column(comp_mail; comp."E-Mail")
             {
-                
+
             }
-            column(Gst_No;comp."GST Registration No.")
+            column(Gst_No; comp."GST Registration No.")
             {
-                
+
             }
-            
+
             column(BilltoName; "Bill-to Name")
             {
             }
@@ -65,13 +65,13 @@ report 50002 kuber_deliveryChallan
             column(BilltoCity; "Bill-to City")
             {
             }
-            column(Bill_to_Country_Region_Code;"Bill-to Country/Region Code")
+            column(Bill_to_Country_Region_Code; "Bill-to Country/Region Code")
             {
-                
+
             }
-            column(Bill_to_Post_Code;"Bill-to Post Code")
+            column(Bill_to_Post_Code; "Bill-to Post Code")
             {
-                
+
             }
             column(No; "No.")
             {
@@ -85,73 +85,73 @@ report 50002 kuber_deliveryChallan
             column(TransportMethod; "Transport Method")
             {
             }
-            column(Posting_Date;"Posting Date")
+            column(Posting_Date; "Posting Date")
             {
-                
+
             }
-            column(from_city;from_city)
+            column(from_city; from_city)
             {
-                
+
             }
-            column(to_city;to_city)
+            column(to_city; to_city)
             {
-                
+
             }
-            dataitem("Sales Shipment Line";"Sales Shipment Line")
+            dataitem("Sales Shipment Line"; "Sales Shipment Line")
             {
-                DataItemLink= "Document No." = field("No.");
-                column(SrNo;SrNo)
+                DataItemLink = "Document No." = field("No.");
+                column(SrNo; SrNo)
                 {
-                    
+
                 }
-                column(Description;Description)
+                column(Description; Description)
                 {
-                    
+
                 }
-                column(HSN_SAC_Code;"HSN/SAC Code")
+                column(HSN_SAC_Code; "HSN/SAC Code")
                 {
-                    
+
                 }
-                column(Net_Weight;"Net Weight")
+                column(Net_Weight; "Net Weight")
                 {
-                    
+
                 }
-                column(Unit_Price;"Unit Price")
+                column(Unit_Price; "Unit Price")
                 {
-                    
+
                 }
-                column(Amount;Amount)
+                column(Amount; Amount)
                 {
-                    
+
                 }
-                column(CGSTAmt;CGSTAmt)
+                column(CGSTAmt; CGSTAmt)
                 {
-                    
+
                 }
-                column(SGSTAmt;SGSTAmt)
+                column(SGSTAmt; SGSTAmt)
                 {
-                    
+
                 }
-                column(CGSTRate;CGSTRate)
+                column(CGSTRate; CGSTRate)
                 {
-                    
+
                 }
-                column(SGSTRate;SGSTRate)
+                column(SGSTRate; SGSTRate)
                 {
-                    
+
                 }
-                column(GSTRate;GSTRate)
+                column(GSTRate; GSTRate)
                 {
-                    
+
                 }
-                column(Amountinwords;Amountinwords)
+                column(Amountinwords; Amountinwords)
                 {
-                    
+
                 }
                 trigger OnAfterGetRecord()
                 begin
                     SrNo += 1;
-                    Amount := Quantity*"Unit Price";
+                    Amount := Quantity * "Unit Price";
 
 
                     clear(GSTrate);
@@ -194,14 +194,14 @@ report 50002 kuber_deliveryChallan
                     GSTAmt := Abs(SGSTAmt + IGSTAmt + CGSTAmt);
 
 
-                     Clear(Amountinwords);
+                    Clear(Amountinwords);
                     InitTextVariable();
                     Amount := round(Amount, 0.01);
                     FormatNoText(Notext1, Amount, "Sales Shipment Line".GetCurrencyCode());
                     Amountinwords := Notext1[1];
                 end;
             }
-                trigger OnAfterGetRecord()
+            trigger OnAfterGetRecord()
             begin
                 transshipm.Reset();
                 transshipm.SetRange("Transfer-from Code", "SalesShipmentHeader"."Location Code");
@@ -234,11 +234,12 @@ report 50002 kuber_deliveryChallan
     begin
         comp.Get();
     end;
+
     var
-    comp: Record "Company Information";
-    Amount:Decimal;
-    SrNo:Integer;
-     GSTAmt: Decimal;
+        comp: Record "Company Information";
+        Amount: Decimal;
+        SrNo: Integer;
+        GSTAmt: Decimal;
         ItemGstrate: Decimal;
         CGSTAmt: Decimal;
         IGSTAmt: Decimal;
@@ -250,11 +251,11 @@ report 50002 kuber_deliveryChallan
         taxinformation: Record "Tax Transaction Value";
         ComponentAmt: Decimal;
         TaxTypeObjHelper: Codeunit "Tax Type Object Helper";
-        transshipm:Record "Transfer Shipment Header";
-        to_city:Text[50];
-        from_city:Text[50];
+        transshipm: Record "Transfer Shipment Header";
+        to_city: Text[50];
+        from_city: Text[50];
 
-         Amountinwords: Text;
+        Amountinwords: Text;
         Notext1: array[2] of Text[100];
         Notext2: array[2] of Text[100];
         Text16526: Label 'ZERO';
