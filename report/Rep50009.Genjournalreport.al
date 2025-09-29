@@ -2,10 +2,10 @@ namespace GeneratedProject.GeneratedProject;
 
 using Microsoft.Finance.GeneralLedger.Journal;
 
-report 50010 "Gen.journal_report"
+report 50010 "Genjournal_report"
 {
     ApplicationArea = All;
-    Caption = 'Gen.journal_report';
+    Caption = 'Genjournal_report';
     UsageCategory = ReportsAndAnalysis;
     DefaultLayout = RDLC;
     RDLCLayout = 'RDL/50009_Gen_report.rdl';
