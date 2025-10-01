@@ -134,6 +134,7 @@ report 60010 "demo_report"
                         ApplicationArea = All;
                         Caption = 'End Date';
                     }
+                    
                 }
             }
         }
