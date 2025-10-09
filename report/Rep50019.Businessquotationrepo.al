@@ -16,59 +16,59 @@ report 50019 Business_quotation_repo
     {
         dataitem(SalesHeader; "Sales Header")
         {
-            column(comp_pic;comp.Picture)
+            column(comp_pic; comp.Picture)
             {
-                
+
             }
-            column(comp_name;comp.Name)
+            column(comp_name; comp.Name)
             {
-                
+
             }
-            column(comp_add;comp.Address)
+            column(comp_add; comp.Address)
             {
-                
+
             }
-            column(comp_add2;comp."Address 2")
+            column(comp_add2; comp."Address 2")
             {
-                
+
             }
-            column(comp_city;comp.City)
+            column(comp_city; comp.City)
             {
-                
+
             }
-            column(comp_sc;comp."State Code")
+            column(comp_sc; comp."State Code")
             {
-                
+
             }
-            column(comp_pc;comp."Post Code")
+            column(comp_pc; comp."Post Code")
             {
-                
+
             }
-            column(comp_regioncode;comp."Country/Region Code")
+            column(comp_regioncode; comp."Country/Region Code")
             {
-                
+
             }
-            column(comp_mail;comp."E-Mail")
+            column(comp_mail; comp."E-Mail")
             {
-                
+
             }
-            column(comp_ph;comp."Phone No.")
+            column(comp_ph; comp."Phone No.")
             {
-                
+
             }
-            column(comp_bname;comp."Bank Name")
+            column(comp_bname; comp."Bank Name")
             {
-                
+
             }
-            column(comp_bno;comp."Bank Branch No.")
+            column(comp_bno; comp."Bank Branch No.")
             {
-                
+
             }
-            column(comp_bacc;comp."Bank Account No.")
+            column(comp_bacc; comp."Bank Account No.")
             {
-                
+
             }
-          
+
             column(PostingDate; "Posting Date")
             {
             }
@@ -98,97 +98,97 @@ report 50019 Business_quotation_repo
             }
             // column(Sell_to_Phone_No_;"Sell-to Phone No.")
             // {
-                
+
             // }
             // column(Sell_to_E_Mail;"Sell-to E-Mail")
             // {
-                
+
             // }
-            column(Bill_to_Contact;"Bill-to Contact")
+            column(Bill_to_Contact; "Bill-to Contact")
             {
-                
+
             }
-            column(Customer_GST_Reg__No_;"Customer GST Reg. No.")
+            column(Customer_GST_Reg__No_; "Customer GST Reg. No.")
             {
-                
+
             }
-            column(custmail;custmail)
+            column(custmail; custmail)
             {
-                
+
             }
-            column(custph;custph)
+            column(custph; custph)
             {
-                
+
             }
-            dataitem("Sales Line";"Sales Line")
+            dataitem("Sales Line"; "Sales Line")
             {
                 DataItemLink = "Document No." = field("No.");
-                column(SrNo;SrNo)
+                column(SrNo; SrNo)
                 {
-                    
+
                 }
-                column(Description;Description)
+                column(Description; Description)
                 {
-                    
+
                 }
-                column(Unit_of_Measure_Code;"Unit of Measure Code")
+                column(Unit_of_Measure_Code; "Unit of Measure Code")
                 {
-                    
+
                 }
-                column(HSN_SAC_Code;"HSN/SAC Code")
+                column(HSN_SAC_Code; "HSN/SAC Code")
                 {
-                    
+
                 }
-                column(Quantity;Quantity)
+                column(Quantity; Quantity)
                 {
-                    
+
                 }
-                column(Unit_Price;"Unit Price")
+                column(Unit_Price; "Unit Price")
                 {
-                    
+
                 }
-                column(GSTRate;GSTRate)
+                column(GSTRate; GSTRate)
                 {
-                    
+
                 }
-                column(Amount;Amount)
+                column(Amount; Amount)
                 {
-                    
+
                 }
-                column(Amountinwords;Amountinwords)
+                column(Amountinwords; Amountinwords)
                 {
-                    
+
                 }
-                column(Line_Discount_Amount;"Line Discount Amount")
+                column(Line_Discount_Amount; "Line Discount Amount")
                 {
-                    
+
                 }
-                column(Amount_paid;Amount_paid)
+                column(Amount_paid; Amount_paid)
                 {
-                    
+
                 }
-                column(subtotal;subtotal)
+                column(subtotal; subtotal)
                 {
-                    
+
                 }
-                column(final_amount;finalamount)
+                column(final_amount; finalamount)
                 {
-                    
+
                 }
-                column(balance;balance)
+                column(balance; balance)
                 {
-                    
+
                 }
-                trigger OnAfterGetRecord()     
+                trigger OnAfterGetRecord()
                 begin
                     Clear(subtotal);
                     Clear(finalamount);
                     Clear(balance);
-                SrNo += 1;
+                    SrNo += 1;
                     Amount := Quantity * "Unit Price";
-                    subtotal+=Amount;
-                    finalamount:= subtotal - "Line Discount Amount" ;
-                    balance:=finalamount - Amount_paid; 
+                    subtotal += Amount;
+                    finalamount := subtotal - "Line Discount Amount";
+                    balance := finalamount - Amount_paid;
                     clear(GSTrate);
                     clear(CGSTAmt);
                     clear(CGSTRate);
@@ -239,12 +239,12 @@ report 50019 Business_quotation_repo
             }
             trigger OnAfterGetRecord()
             begin
-               cust.Reset();
-               cust.SetRange("No.",SalesHeader."Bill-to Customer No.");
-               if cust.FindFirst() then begin
-                custph:=cust."Phone No.";
-                custmail:=cust."E-Mail";
-               end;
+                cust.Reset();
+                cust.SetRange("No.", SalesHeader."Bill-to Customer No.");
+                if cust.FindFirst() then begin
+                    custph := cust."Phone No.";
+                    custmail := cust."E-Mail";
+                end;
             end;
         }
     }
@@ -272,18 +272,19 @@ report 50019 Business_quotation_repo
         comp.Get();
         comp.CalcFields(Picture);
     end;
-    var 
-    comp:Record "Company Information";
-    cust:Record Customer;
-    custph:Code[20];
-    custmail:Text[50];
-     Amount: Decimal;
-     subtotal:Decimal;
-     finalamount:Decimal;
-     balance:Decimal;
-     Amount_paid:Decimal;
-     Totaldiscount: Decimal;
-     Linediscountamt: Decimal;
+
+    var
+        comp: Record "Company Information";
+        cust: Record Customer;
+        custph: Code[20];
+        custmail: Text[50];
+        Amount: Decimal;
+        subtotal: Decimal;
+        finalamount: Decimal;
+        balance: Decimal;
+        Amount_paid: Decimal;
+        Totaldiscount: Decimal;
+        Linediscountamt: Decimal;
         SrNo: Integer;
         GSTAmt: Decimal;
         ItemGstrate: Decimal;
